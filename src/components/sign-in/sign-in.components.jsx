@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./sign-in.styles.scss";
 import FormInput from "../form-input/form-input.component";
-import CustomButton from "../custom-button/custom-button.component"
+import CustomButton from "../custom-button/custom-button.component";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 
 class SignIn extends Component {
   constructor(props) {
@@ -45,7 +46,14 @@ class SignIn extends Component {
             handleChange={this.handleChange}
             required
           />
-          <CustomButton type="submit" value="Submit Form" >SIGN IN</ CustomButton>
+          <div className="buttons">
+            <CustomButton type="submit" value="Submit Form">
+              SIGN IN
+            </CustomButton>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+              SIGN IN WITH GOOGLE
+            </CustomButton>
+          </div>
         </form>
       </div>
     );
