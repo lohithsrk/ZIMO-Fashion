@@ -5,7 +5,6 @@ import Header from "./components/header/header.component";
 import HomePage from "./pages/homepage/HomePage.components";
 import ShopPage from "./pages/shop/shop.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page.component";
-import "./pages/homepage/homepage.styles.scss";
 import CheckoutPage from "./pages/checkout/checkout.component";
 import "./App.css";
 
