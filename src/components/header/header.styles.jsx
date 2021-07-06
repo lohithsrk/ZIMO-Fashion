@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/Zimo.png'
 
 export const HeaderContainer = styled.div`
   height: 70px;
@@ -7,25 +8,16 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background-color: white;
 `;
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 70px;
-  padding-top: 8px;
-`;
-
-export const Logo = styled.img`
   width: 90px;
+  background: url(${logo}) center/contain no-repeat;
 `;
 
 export const OptionsContainer = styled.div`
-  height: 100%;
   width: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
