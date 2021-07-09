@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import logo from '../../assets/Zimo.png'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/Zimo.png";
 
 export const HeaderContainer = styled.div`
   height: 70px;
@@ -11,8 +11,8 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
+  background: url(${Logo}) center/contain no-repeat;
   width: 90px;
-  background: url(${logo}) center/contain no-repeat;
 `;
 
 export const OptionsContainer = styled.div`
