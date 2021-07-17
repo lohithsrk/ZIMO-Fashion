@@ -1,10 +1,9 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
-import Logo from '../../assets/Zimo.png'
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
-  const publishableKey = "pk_test_51J9qWsSJjZfLRrCKTmDY7YwklKmeudG6eP0IbMBewheR9HT3a6TBNM3GFmJX5XIofUNNbrUCYuWAVCnIQgcWaMua00a16VjDYC";
+  const publishableKey = 'pk_test_WBqax2FWVzS9QlpJScO07iuL';
 
   const onToken = token => {
     console.log(token);
@@ -14,10 +13,10 @@ const StripeCheckoutButton = ({ price }) => {
   return (
     <StripeCheckout
       label='Pay Now'
-      name='Zimo Fashion Ltd.'
+      name='CRWN Clothing Ltd.'
       billingAddress
       shippingAddress
-      image={Logo}
+      image='https://svgshare.com/i/CUz.svg'
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel='Pay Now'
