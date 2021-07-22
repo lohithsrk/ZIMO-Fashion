@@ -16,12 +16,12 @@ app.use(compression())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, 'client/build')));
-	app.use(enforce.HTTPS({ trustProtoHeader: true }));
 	app.get('*', function (req, res) {
-		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+		res.sendFile(path.join(__dirname, 'client/build', 'index.html'));  
 	});
 }
 
